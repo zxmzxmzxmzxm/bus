@@ -1,0 +1,40 @@
+/* pages/buySuccess/index.wxss */
+page{
+  font-size: 28rpx;
+  background-color: #fff;
+  color: #333;
+}
+.successTip{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.successIcon{
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 30rpx;
+}
+.orderDetail{
+  width: 500rpx;
+  margin: 0 auto;
+  margin-top: 60rpx;
+}
+.detail-list{
+  display: flex;
+  flex-direction: column;
+}
+.detail-item{
+  height: 70rpx;
+}
+.showOrder{
+  width: 600rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #2d91f8;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 60rpx;
+  border-radius: 10rpx;
+}

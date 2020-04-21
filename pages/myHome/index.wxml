@@ -1,0 +1,83 @@
+<view class="linear">
+  <view class="page">
+    <view class="personTop" wx:if="{{avatarUrl}}">
+      <view class="avatarBox">
+        <image class="avatar0" src="{{avatarUrl}}" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="personTop" wx:else>
+      <image class="avatar" src="../image/deft_touxiang.png" mode="widthFix"></image>
+      <view class="forLogin" bindtap="goLoginTap">授权登陆</view>
+    </view>
+    <view class="order">
+      <view catchtap="goAllOrder" class="order-item">
+        <image class="orderIcon" src="../image/order.png" mode="widthFix"></image>
+        <view class="orderPay">全部订单</view>
+      </view>
+      <view catchtap="goNopayOrder" class="order-item">
+        <image class="orderIcon" src="../image/recordTk.png" mode="widthFix"></image>
+        <view class="orderPay">待支付</view>
+      </view>
+      <view catchtap="goNoTripOrder" class="order-item">
+        <image class="orderIcon" src="../image/xinglixiang.png" mode="widthFix"></image>
+        <view class="orderPay">待出行</view>
+      </view>
+      <view catchtap="goNoAssessOrder" class="order-item">
+        <image class="orderIcon" src="../image/rili.png" mode="widthFix"></image>
+        <view class="orderPay">已出行</view>
+      </view>
+    </view>
+    <view class="about-list">
+      <view class="about-item" bindtap="contactTap">
+        <image class="about-icon" src="../image/passengerIcon.png"></image>
+        <view class="about-item-right">
+          <view class="about-title">常用联系人</view>
+          <image class="right-icon" src="../image/rightIcon.png"></image>
+        </view>
+      </view>
+      <view class="about-item" bindtap="usequan">
+        <image class="about-icon" src="../image/rechargeIcon.png"></image>
+        <view class="about-item-right">
+          <view class="about-title">代金券</view>
+          <image class="right-icon" src="../image/rightIcon.png"></image>
+        </view>
+      </view>
+      <view class="about-item" bindtap="myevaluation">
+        <image class="about-icon" src="../image/qb.png"></image>
+        <view class="about-item-right">
+          <view class="about-title">我的评价</view>
+          <image class="right-icon" src="../image/rightIcon.png"></image>
+        </view>
+      </view>
+      <view class="about-item kefu" bindtap="customerTap">
+        <image class="about-icon" src="../image/serviceIcon.png"></image>
+        <view class="about-item-right">
+          <view class="about-title">投诉咨询</view>
+          <view class="tell">
+            <text>{{customer}}</text>
+            <!-- <image class="right-icon" src="../image/rightIcon.png"></image> -->
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="about-list share">
+      <button class="about-item onshare" bindtap="onShareAppMessage" open-type="share"> 
+        <image class="about-icon" src="../image/rechargeIcon.png"></image>
+        <view class="about-item-right">
+          <view class="about-title">分享赚钱</view>
+          <view class="tell">
+            <!-- <text>月入5000元</text> -->
+            <image class="right-icon" src="../image/rightIcon.png"></image>
+          </view>
+        </view>
+      </button>
+      <view class="about-item kefu">
+        <image class="about-icon" src="../image/qb.png"></image>
+        <view class="about-item-right">
+          <view class="about-title">优惠充值</view>
+          <image class="right-icon" src="../image/rightIcon.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/login/index.wxml-->
+<view class="page">
+  <image class="logo" src="../image/loginlogo.png"></image>
+  <view class="title">登 录</view>
+  <view class="login-list">
+    <view class="login-item">
+      <text class="loginT">手机号</text>
+      <input placeholder="请输入手机号" value="{{phone}}" type="number" class="phone" bindinput="blurPhone" placeholder-class="phcolor"></input>
+    </view>
+    <view class="login-item">
+      <text class="loginT">验证码</text>
+      <input placeholder="请输入验证码" value="{{code}}" class="phone code" bindinput="blurCode" placeholder-class="phcolor"></input>
+      <button class="getCode" bindtap="sendCode" disabled="{{smsFlag}}" style='color:{{sendColor}}'>{{sendTime}}</button>
+    </view>
+    <button class="goUser goLogin" bindtap="loginTap">注册</button>
+  </view>
+  <!--弹窗-->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="title title0">为保证您的正常使用，请先授权</view>
+    <button class="goUser" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">去授权</button>
+  </view>
+</view>

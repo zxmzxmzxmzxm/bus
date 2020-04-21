@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/travel/index",
+    "pages/driverOrderDetail/index",
+    "pages/scan/index",
+    "pages/myHome/index",
+    "pages/driverOrder/index",
+    "pages/driverLogin/index",
+    "pages/airService/index",
+    "pages/fill/index",
+    "pages/passengers/index",
+    "pages/login/index",
+    "pages/passengers/addPassenger/index",
+    "pages/passengers/contact/index",
+    "pages/passengers/updatePassenger/index",
+    "pages/buySuccess/index",
+    "pages/myHome/vouchers/index",
+    "pages/trip/index",
+    "pages/buyTicket/index",
+    "pages/orderDetail/index",
+    "pages/code/index",
+    "pages/address/index",
+    "pages/myHome/evaluation/index",
+    "pages/order/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于购票使用"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "晋捷出行",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#999999",
+    "selectedColor": "#FEC240",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/travel/index",
+        "text": "出行",
+        "iconPath": "pages/image/CarD.png",
+        "selectedIconPath": "pages/image/CarL.png"
+      },
+      {
+        "pagePath": "pages/trip/index",
+        "text": "行程",
+        "iconPath": "pages/image/OrderD.png",
+        "selectedIconPath": "pages/image/OrderL.png"
+      },
+      {
+        "pagePath": "pages/myHome/index",
+        "text": "我的",
+        "iconPath": "pages/image/MyD.png",
+        "selectedIconPath": "pages/image/MyL.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "BargainActivity/",
+      "pages": [
+
+      ]
+    }
+  ],
+  "usingComponents": {
+    "calendar": "/components/calendar/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

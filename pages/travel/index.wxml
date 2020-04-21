@@ -1,0 +1,154 @@
+<!--pages/travel/index.wxml-->
+<import src="../../template/calendar/index.wxml"/>
+<view class="page">
+  <view class="head">
+    <!-- <image class="logo" src="../image/logoimg.png"></image> -->
+    <view>晋捷出行</view>
+    <image class="bus" src="../image/bus.png" bindtap="driverTap"></image>
+  </view>
+  <view class="swiper-container">
+    <swiper autoplay="{{false}}" circular="true" class="swiper" current="{{swiperCurrent}}" duration="500" indicatorActiveColor="#FFFFFF" indicatorDots="{{false}}" interval="5000">
+      <swiper-item>
+        <image class="swiper-img" src="../image/banner2.jpg" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="swiper-img" src="../image/banner1.jpg" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class="swiper-img" src="../image/banner3.jpg" mode="widthFix"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="pagetop">
+    <view class="form">
+      <view class="address-container">
+        <view class="address">
+          <view class="goCityT">出发地</view>
+          <view class="goCity" bindtap="chooseCitys" data-p="0" data-selcity="{{endCity}}">{{startCity}}</view>
+          <view class="border"></view>
+          <input class="startWhere" placeholder='您在哪上车？' value="{{myAddress}}" placeholder-class="fgreen" bindtap='getLocations' data-code="{{Stcode}}" data-status="1" data-po="0" name="start"  data-cityn="{{startCity}}" disabled='disabled' data-city="{{ktCity}}" data-citys="{{Ncity}}" data-ncitys="{{startCity}}"></input>
+        </view>
+        <view class="address">
+          <view class="goCityT">目的地</view>
+          <view class="goCity" bindtap="chooseCitys" data-p="1" data-selcity="{{startCity}}">{{endCity}}</view>
+          <view class="border"></view>
+         <input class="end startWhere" placeholder='您要去哪儿？' value='{{myAddress1}}' placeholder-class="fred" bindtap='getLocations' data-code="{{Stcode}}" data-status="1" data-cityn="{{endCity}}" bindfocus="changeBtn" data-po="1" name="end" disabled='disabled' data-ncitys="{{endCity}}"></input>
+        </view>
+      <view class="address" >
+        <view class="goCityT">出发时间</view>
+        <view class="time" bindtap='times' >{{time}}</view>
+      </view>
+        <!-- 起点经度纬度 -->
+        <input class="lat" name="Latitude" value='{{startLat}}' hidden='true'></input>
+        <input class="lng" name="longitude" value='{{startLng}}' hidden='true'></input>
+        <input class="address" name="address" value='{{startAddress}}' hidden='true'></input>
+        <!-- 终点经度纬度 -->
+        <input class="lat" name="wd" value='{{endLat}}' hidden='true'></input>
+        <input class="lng" name="jd" value='{{endLng}}' hidden='true'></input>
+        <input class="address" name="point" value='{{endAddress}}' hidden='true'></input>
+        <input class="" name="flag" value='0' hidden='true'></input>
+        <input class="" name="uid" value='{{uid}}' hidden='true'></input>
+      </view>
+      <!-- <image src="../image/change.png" class="change" mode="widthFix" bindtap="changeHandle"></image> -->
+      
+    </view>
+    <!-- 四级标签开始 -->
+    <!-- 后台获取数据 -->
+    <view class="citysFour" style='display:{{fourShow}}'>
+      <block wx:for="{{gtransitlist}}" wx:key="key">
+        <view class="chose-txt" data-id="{{index}}" data-address="{{item.address}}" data-pointId="{{item.pointId}}" data-lat="{{item.latitude}}" data-lng="{{item.longitude}}" bindtap="typeCodeSel" data-serviceLineId="{{item.serviceLineId}}" style="{{index == one?' border:1rpx solid #e8425d; color: #e8425d':'border:1rpx solid #a0a0a0;color:gray'}}" data-type="{{type}}">
+            <text class="chose-p">{{item.address}}</text>         
+        </view>       
+      </block>
+    </view>
+    <!-- 四级标签结束 -->
+    <view class="mask" bindtap='hidemask' style="display:{{display}}"></view>
+  <view class="searchB" bindtap="getListTap">查询</view>
+  </view>
+  <view class="charter-container">
+    <view class="charter">
+      <view class="charterT">包车服务</view>
+      <view class="">豪华商务车准时上门接送</view>
+    </view>
+    <view class="charterType">
+      <view bindtap="goServiceTap" data-service="{{gt}}">
+        <image src="../image/gt.png" mode="widthFix"></image>
+      </view>
+      <view bindtap="goServiceTap" data-service="{{air}}">
+        <image src="../image/air.png" mode="widthFix"></image>
+      </view>
+      <view bindtap="goServiceTap" data-service="{{custom}}">
+        <image src="../image/custom.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 城市弹窗 -->
+<view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+    <!-- 专车 -->
+    <view class="drawer_attr_boxs">
+        <view class="fixed">
+            <view class="wrapTitle">
+                <view bindtap="backs" data-status="0">
+                  <text class="iconfont icon-back-01"></text> 
+                </view>
+            </view>
+            <view class="search">
+                <view class="weui-search-bar">
+                    <view class="weui-search-bar__form">
+                        <view class="weui-search-bar__box">
+                            <icon class="weui-icon-search_in-box" type="search" size="15"></icon>
+                            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                                <icon type="clear" size="14"></icon>
+                            </view>
+                        </view>
+                        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                            <icon class="weui-icon-search" type="search" size="15"></icon>
+                            <view class="weui-search-bar__text">搜索</view>
+                        </label>
+                    </view>
+                    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+                </view>
+
+            </view>
+        </view>
+        <!-- 搜索列表 -->
+
+        <view class="searchList">
+            <view class="addList" wx:for="{{addList}}" wx:key='id' wx:for-item="item" data-index="{{index}}" data-po="{{1}}" bindtap='selectList'>
+                <icon class="iconfont icon-add"></icon>
+                <view class="halfBox">
+                    <view class="half">{{item.title}}</view>
+                    <view class="half halfs">{{item.address}}</view>
+                    <input value="{{item.lat}}" hidden='true'></input>
+                    <input value="{{item.lng}}" hidden='true'></input>
+                </view>
+            </view>
+        </view>
+        <!-- 城市列表 -->
+    </view>
+</view>
+<!-- 日期 -->
+<view class="dateBox" style="display:{{dateshow}}">
+  <view class="calendar-wrap">
+    <template is="calendar" data="{{...calendar}}" />
+  </view>
+  <view class="busback backDate" bindtap="backDateTap">退出</view>
+</view>
+<!-- 城市选择 -->
+<view class="citysCon" style="display:{{citynshow}}">
+  <view wx:if="{{startCitys.length>0}}">
+    <view class="goback" bindtap="backCityTap">退出</view>
+    <view class="address-list">
+      <view class="address-item" bindtap="checkCity" data-typs="{{typs}}" wx:for="{{startCitys}}" wx:for-item="item" data-address="{{item}}">{{item}}</view>
+    </view>
+  </view>
+  <view wx:else class="nobusbox">
+    <image src="../image/noCityNS.png" class="nobus-img"></image>
+    <view class="nobus">暂无相关城市数据~~~</view>
+    <view class="busback" bindtap="backCityTap">退出</view>
+  </view>
+</view>
+

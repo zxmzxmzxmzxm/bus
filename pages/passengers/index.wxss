@@ -1,0 +1,60 @@
+/* pages/passengers/index.wxss */
+page{
+  font-size: 28rpx;
+  background-color: #f1f1f1;
+  color: #333;
+}
+.fillT{
+  line-height: 70rpx;
+  color: #999;
+  margin-left: 40rpx;
+}
+.passenger-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding: 20rpx 40rpx;
+  border-bottom: 1px solid #f3f3f3;
+  justify-content: space-between;
+}
+.passenger-item{
+  display: flex;
+  flex-direction: column;
+}
+.passenger-item text{
+  height: 50rpx;
+}
+.edit{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 40rpx;
+}
+.bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.addPassenger{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.complete{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #3183f5;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

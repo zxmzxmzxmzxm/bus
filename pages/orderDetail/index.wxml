@@ -1,0 +1,66 @@
+<!--pages/orderDetail/index.wxml-->
+<view>
+  <view class="fill-list">
+    <text class="fillT">订单编号：{{orderNo}}</text>
+    <view class="ticket-info">
+      <view>发车：{{dateTime}}</view>
+      <view class="ticket-info-list">
+        <image src="../image/shang.png" class="ticket-info-icon"></image>
+        <text>{{upStart}}</text>
+      </view>
+      <view class="ticket-info-list">
+        <image src="../image/xia.png" class="ticket-info-icon"></image>
+        <text>{{downEnd}}</text>
+      </view>
+      <view class="payStatus">
+        <view>金额<text class="pay-money">{{countPrice}}</text>元，{{flagLabel}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="fill-list">
+    <text class="fillT">出行信息</text>
+    <view class="travel-list">
+      <view class="travel-item">
+        <text>随车电话</text>
+        <text>{{driverPhone}}</text>
+      </view>
+      <view class="travel-item">
+        <text>成人票数</text>
+        <text>{{pronseNum}}位</text>
+      </view>
+      <view class="passenger-item" wx:for='{{pronseList}}' wx:for-item='list'>
+        <text>{{list.pronseName}}</text>
+        <view class="callPassenger" bindtap="callPassengerTap">
+          <text>手机号 {{list.pronsePhone}}</text>
+          <image src="../image/phoneBlue.png" class="callImg"></image>
+        </view>
+        <text>身份证号 {{list.pronseIdCard}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="fill-list">
+    <text class="fillT">费用信息</text>
+    <view class="travel-list">
+      <view class="travel-item">
+        <text>优惠抵扣</text>
+        <text>{{discount}}元</text>
+      </view>
+      <view class="travel-item">
+        <text>实付款</text>
+        <text>{{payPrice}}元</text>
+      </view>
+      <view class="travel-item">
+        <text>支付方式</text>
+        <text>微信支付</text>
+      </view>
+      <view class="refundBox" wx:if="{{isFlag=='0'}}">
+        <view class="refund" bindtap="payTap">去支付</view>
+        <view class="refund refund_" bindtap="cancelOrderTap">取消订单</view>
+      </view>
+      <view class="refundBox" wx:elif="{{isFlag=='3'}}">
+        <view class="refund" bindtap="checkTap">去验票</view>
+        <view class="refund refund_" bindtap="refundTap">退票</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/buyTicket/index.wxml-->
+<view>
+  <view>
+    <view class="date-time">{{date}}</view>
+    <view class="bus-container {{item.cars==null||item.showFlag==0?'disableClass':''}}" wx:for='{{result}}' wx:for-item='item'>
+      <view class="bus-left">
+        <text>{{item.className}} {{item.date}}</text>
+        <view class="site-list">
+          <view class="site-item">
+            <view class="startDot"></view>
+            <view>{{myAddress}}</view>
+          </view>
+          <view class="site-item">
+            <view class="startDot endDot" ></view>
+            <view>{{myAddress1}}</view>
+          </view>
+        </view>
+        <!-- <view class="site-list">
+          <view class="site-item" wx:for="{{item.updownStations}}" wx:for-item="station" wx:if="{{station.statusFlag==1}}">
+            <view class="startDot"></view>
+            <view>{{station.stationNames}}</view>
+          </view>
+          <view class="site-item" wx:for="{{item.updownStations}}" wx:for-item="station" wx:if="{{station.statusFlag==2}}">
+            <view class="startDot endDot" ></view>
+            <view>{{station.stationNames}}</view>
+          </view>
+        </view> -->
+      </view>
+      <view class="bus-right">
+        <!-- <view class="pay-item">
+          <text class="payT">可用代金券￥</text>
+          <text class="money">50</text>
+        </view> -->
+        <view class="pay-item {{item.cars==null||item.showFlag==0?'disableClass':''}}">
+          <text class="payT">微信支付￥</text>
+          <text>{{item.price}}</text>
+        </view>
+        <!-- <view class="hasRest">有余位</view> -->
+        <view wx:if="{{item.cars==null||item.showFlag==0}}" class="reserve noBus">暂无车辆</view>
+        <view wx:else class="reserve" bindtap="reservationTap" data-id="{{item.cars.id}}" data-carMobile="{{item.cars.mobile}}" data-carno="{{item.cars.carNo}}" data-classn="{{item.className}}" data-time="{{item.date}}" data-price="{{item.price}}" data-driver="{{item.cars.driver}}" data-carLicence="{{item.cars.carLicence}}" >立即预定</view>
+      </view>
+    </view>
+    <view class="tip">
+      <view>温馨提示</view>
+      <view>1、根据相关法律规定，乘车时必须核对本人有效证件。请乘客朋友务必携带好有效证件，一面影响出行</view>
+      <view>2、如遇恶劣天气或复杂交通路况，可能会导致时间延误，请乘客朋友谅解</view>
+    </view>
+  </view>
+</view>

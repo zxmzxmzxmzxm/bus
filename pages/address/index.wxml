@@ -1,0 +1,4 @@
+<!--pages/address/index.wxml-->
+<view class="address-list">
+  <view class="address-item" bindtap="checkCity" wx:for="{{startCitys}}" wx:for-item="item">{{item}}</view>
+</view>

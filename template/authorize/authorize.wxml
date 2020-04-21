@@ -1,0 +1,14 @@
+<view class="jgsm_list" wx:if="{{authorize}}">
+    <view class="jgsm_content">
+        <view class="jgsm_title">
+            <view class="juzhong">
+                <view class="cs_1">朕爱出行友情提醒</view>
+                <view class="cs_2">为了能给您提供完整顺畅的购票服务
+                    请您授权您的微信个人信息</view>
+            </view>
+        </view>
+        <view class="jgsm_btn">
+            <button bindgetuserinfo="getUserInfo" class="btn_zyy" openType="getUserInfo">朕知道了</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,151 @@
+/* pages/myHome/index.wxss */
+page{
+  background-color: #f1f1f1;
+  font-size: 28rpx;
+}
+.linear{
+  height: 600rpx;
+  background-image: linear-gradient(180deg,#59b1ec, #f1f1f1);
+}
+.page{
+  padding: 40rpx;
+}
+.personTop{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.avatarBox{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 40rpx;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.avatar0{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.avatar{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 40rpx;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.forLogin{
+  width: 200rpx;
+  background-color: #1AA2EE;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 40rpx;
+}
+.orderView{
+  margin: 30rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.myorderIcon{
+  width: 60rpx;
+  margin-right: 30rpx;
+}
+.order{
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  color: #333;
+  font-size: 28rpx;
+}
+.order{
+  width: 100%;
+  margin: 40rpx 0;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.order-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.orderIcon{
+  width: 60rpx;
+  margin-bottom: 30rpx;
+}
+.about-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 0;
+}
+.about-item{
+  width: 100%;
+  line-height: 60rpx;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.kefu{
+  border: none;
+  margin-bottom: 0;
+}
+.about-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.about-title{
+  margin: 0 30rpx;
+}
+.right-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.about-item-right{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tell{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #666;
+}
+.share{
+  margin-top: 40rpx;
+}
+.onshare{
+  border: none;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+.onshare::after{
+  border: none;
+  border-bottom: 1px solid #f3f3f3;
+}

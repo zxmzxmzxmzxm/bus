@@ -1,0 +1,113 @@
+/* pages/scan/index.wxss */
+page{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://qjycard.com/WechatIMG1743.png);
+  background-size: cover;
+}
+.driverOperate{
+  width: 400rpx;
+  height: 600rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.goUser{
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+  background-color: #469cfe;
+  font-size: 28rpx;
+  margin-top: 60rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.goUser::after{
+  border: none;
+}
+.orderList{
+  background-color: #07a878;
+}
+.orderBox{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: #fff;
+  z-index: 11111;
+}
+.fillT{
+  line-height: 70rpx;
+  color: #999;
+  margin-left: 40rpx;
+}
+.ticket-info{
+  padding: 20rpx 40rpx;
+  background-color: #fff;
+}
+.ticket-info-list{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ticket-info-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.payStatus{
+  margin-top: 20rpx;
+}
+.pay-money{
+  color: #fa2759;
+}
+.pay-type{
+  color: #2f77e3;
+}
+.travel-list{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.travel-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 40rpx;
+}
+.passenger-item{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 40rpx;
+}
+.callPassenger{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.callImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.refund{
+  width: 90%;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #2f77e3;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 100rpx;
+}

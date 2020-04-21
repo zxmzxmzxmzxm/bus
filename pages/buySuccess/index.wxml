@@ -1,0 +1,16 @@
+<!--pages/buySuccess/index.wxml-->
+<view>
+  <view class="successTip">
+    <image src="../image/ypSuccessIcon.png" class="successIcon"></image>
+    <view>订票成功</view>
+  </view>
+  <view class="orderDetail">
+    <view class="detail-list">
+      <view class="detail-item">出发时间：{{dateTime}}</view>
+      <view class="detail-item">上车地点：{{upStart}}</view>
+      <view class="detail-item">随车电话：{{carMobile}}</view>
+      <view class="detail-item">订单金额：{{countPrice}}元</view>
+    </view>
+  </view>
+  <view class="showOrder" bindtap="showOrderTap">返回首页</view>
+</view>

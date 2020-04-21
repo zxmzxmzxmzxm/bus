@@ -1,0 +1,79 @@
+/* pages/buyTicket/index.wxss */
+page{
+  font-size: 28rpx;
+  background-color: #f1f1f1;
+  color: #333;
+}
+.date-time{
+  color: #333;
+  padding: 40rpx;
+}
+.bus-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.site-list{
+  margin-top: 40rpx;
+}
+.site-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.startDot{
+  width: 16rpx;
+  height: 16rpx;
+  border: 1px solid #3d74ff;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.endDot{
+  border: 1px solid #f9729b;
+}
+.pay-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20rpx;
+  color: #fa4d4d;
+}
+.payT{
+  font-size: 28rpx;
+  /* color: #fa4d4d; */
+}
+.hasRest{
+  color: #519bf6;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20rpx;
+}
+.reserve{
+  width: 140rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border: 1px solid #519bf6;
+  color: #519bf6;
+  margin-top: 70rpx;
+  border-radius: 10rpx;
+}
+.noBus{
+  border: none;
+  color: #eee;
+}
+.disableClass{
+  color: #eee;
+}
+.tip{
+  margin-top: 60rpx;
+  color: #999;
+  padding: 0 40rpx;
+  font-size: 24rpx;
+}

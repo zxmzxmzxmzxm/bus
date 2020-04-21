@@ -1,0 +1,215 @@
+/* pages/driverOrder/index.wxss */
+page{
+  color: #333;
+  background-color: #f1f1f1;
+  font-size: 28rpx;
+}
+.redC {
+  color: #ff0505;
+}
+.top .border-btm {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.allOrder {
+    overflow: hidden;
+}
+.top {
+    display:flex;
+    justify-content: space-around;
+    background: #fff;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 24rpx;
+}
+.all-top {
+    overflow: hidden;
+    padding: 20rpx 20rpx;
+    /* border-bottom: 1px solid silver; */
+    margin-top: 10px;
+    background: #fff;
+}
+
+.top view{
+    width: 33%;
+    text-align: center;
+    margin: 0 18rpx;
+    color: #999;
+}
+.hover {
+   color: red;
+    border-bottom: 2px solid red;
+}
+.allT-left {
+    float: left;
+    
+}
+.allT-left view text{
+    color: gray;
+}
+.allT-left .allT-leftO text {
+
+  color: #ff0505;
+
+}
+
+.allT-left view .yzf {
+  color: gray;  
+}
+
+.allT-left .orderNum {
+  font-size: 28rpx;
+}
+.orderTime {
+  font-size: 28rpx;
+}
+.allT-right {
+    background: #000;
+    color: white;
+    float: right;
+    padding: 20rpx;
+    font-size: 28rpx;
+     width: 120rpx;
+     text-align: center;
+     display: inline-block;
+}
+/* 下部 */
+.all-bottom {
+    padding: 20rpx 20rpx;
+    overflow: hidden;
+    background: #fff;
+}
+
+.allB-img {
+    width: 25%;
+    height: 150rpx;
+    float: left;
+}
+.allB-img > image{
+  width:100%;
+  height: 100%;
+}
+.allB-right {
+    width:72%;
+    float: right;
+
+}
+.all-rText {
+  display: block;
+  color: gray;
+  font-size: 24rpx;
+  padding-top: 10px;
+}
+.notText {
+  text-align: center;
+  display: block;
+  font-size: 35rpx;
+  color: silver;
+  padding-top: 50%;
+}
+.allT-leftT .allValue {
+  color: black;
+}
+.allB-right text:nth-of-type(1){
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.notGoodsWrap:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: #999;/*颜色需与主题大背景色一致*/ 
+    position: relative;
+    top: 25px;/*调节线高*/
+    left: 10%;
+}
+.notGoods-text{
+    display: inline-block;
+    background: #f2f2f2;
+    padding: 0 18px 0 18px;
+    position: relative;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+.myOrderDtop view text:nth-of-type(2){
+  font-size: 28rpx;
+}
+.bottom-down {
+  line-height: 80rpx;
+  text-align: center;
+}
+
+
+.nobuyTip{
+  color: #333;
+  text-align: center;
+  margin-top: 100rpx;
+}
+.toBuy{
+  width: 50%;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #1AA2EE;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  border-radius: 40rpx;
+}
+.date{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.detail-list{
+  padding: 40rpx;
+  background-color: #fff;
+  margin-top: 40rpx;
+}
+.site-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.startDot{
+  width: 16rpx;
+  height: 16rpx;
+  border: 1px solid #3d74ff;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.endDot{
+  border: 1px solid #f9729b;
+}
+.site-list{
+  margin-top: 20rpx;
+}
+.detail-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.detail-operate{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.money{
+  color: #f83252;
+  display: flex;
+  justify-content: flex-end;
+}
+.go-detail{
+  width: 140rpx;
+  line-height: 60rpx;
+  background-color: #2f77e3;
+  color: #fff;
+  text-align: center;
+}

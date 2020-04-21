@@ -1,0 +1,73 @@
+/* pages/driverOrderDetail/index.wxss */
+page{
+  font-size: 28rpx;
+  background-color: #f1f1f1;
+  color: #333;
+}
+.fillT{
+  line-height: 70rpx;
+  color: #999;
+  margin-left: 40rpx;
+}
+.ticket-info{
+  padding: 20rpx 40rpx;
+  background-color: #fff;
+}
+.ticket-info-list{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ticket-info-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.payStatus{
+  margin-top: 20rpx;
+}
+.pay-money{
+  color: #fa2759;
+}
+.pay-type{
+  color: #2f77e3;
+}
+.travel-list{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.travel-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 40rpx;
+}
+.passenger-item{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 40rpx;
+}
+.callPassenger{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.callImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.refund{
+  width: 90%;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #2f77e3;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 100rpx;
+}

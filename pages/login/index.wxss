@@ -1,0 +1,177 @@
+/* pages/login/index.wxss */
+page{
+  font-size: 28rpx;
+  color: #333;
+  background-image: url(https://qjycard.com/WechatIMG1743.png);
+  background-size: cover;
+}
+.page{
+  padding: 100rpx 40rpx 400rpx 40rpx;
+  /* background-image: linear-gradient(180deg,#59b1ec, #fff); */
+}
+.title{
+  text-align: center;
+  color: #81c2e1;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.logo{
+  width: 400rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+}
+.phcolor{
+  color: #fff;
+}
+.goUser{
+  color: #fff;
+  border: none;
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  background-color: #469cfe;
+  font-size: 28rpx;
+  margin-top: 60rpx;
+}
+.goUser::after{
+  border: none;
+}
+.login-list{
+  width: 600rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+.login-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.loginT{
+  margin-right: 20rpx;
+  color: #fff;
+}
+.phone{
+  width: 410rpx;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  color: #fff;
+}
+.code{
+  width: 200rpx;
+}
+.getCode{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  background-color: #469cfe;
+  color: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  margin-left: 20rpx;
+  color: #fff;
+  box-sizing: border-box;
+}
+.getCode::after{
+  border: none;
+}
+/* 弹窗开始 */
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+ 
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+ 
+.modal-dialog {
+  width: 540rpx;
+  height: 400rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9999;
+  background: #f9f9f9;
+  border-radius: 36rpx;
+}
+ 
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+ 
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+ 
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+ 
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+ 
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+ 
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+ 
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+.title0{
+  font-size: 28rpx;
+  color: #333;
+}
+/* 弹窗结束 */
+.goLogin{
+  width: 100%;
+}

@@ -1,0 +1,34 @@
+<!--pages/driverOrderDetail/index.wxml-->
+<view>
+  <view class="fill-list">
+    <text class="fillT">订单编号：{{orderNo}}</text>
+    <view class="ticket-info">
+      <view>发车：{{dateTime}}</view>
+      <view class="ticket-info-list">
+        <image src="../image/shang.png" class="ticket-info-icon"></image>
+        <text>{{upStart}}</text>
+      </view>
+      <view class="ticket-info-list">
+        <image src="../image/xia.png" class="ticket-info-icon"></image>
+        <text>{{downEnd}}</text>
+      </view>
+      <view class="payStatus">
+        <view>金额<text class="pay-money">{{countPrice}}</text>元，未支付</view>
+      </view>
+    </view>
+  </view>
+  <view class="fill-list">
+    <text class="fillT">乘客信息</text>
+    <view class="travel-list">
+      <view class="passenger-item" wx:for='{{pronseList}}' wx:for-item='list'>
+        <text>{{list.pronseName}}</text>
+        <view class="callPassenger" bindtap="callPassengerTap">
+          <text>手机号 {{list.pronsePhone}}</text>
+          <image src="../image/phoneBlue.png" class="callImg"></image>
+        </view>
+        <text>身份证号 {{list.pronseIdCard}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,20 @@
+/* pages/address/index.wxss */
+page{
+  font-size: 28rpx;
+  background-color: #f1f1f1;
+}
+.address-list{
+  padding: 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.address-item{
+  width: 30%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+  margin: 0 10rpx 20rpx 10rpx;
+}

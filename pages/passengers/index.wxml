@@ -1,0 +1,23 @@
+<!--pages/passengers/index.wxml-->
+<view>
+  <view class="fill-list">
+    <text class="fillT">选择乘车人</text>
+    <checkbox-group bindchange="checkboxChange">
+      <view class="passenger-list" wx:for='{{personData}}' wx:for-item='item'>
+        <view class="left">
+          <image src="../image/edit1.png" class="edit" bindtap="editTap" data-id='{{item.id}}'></image>
+          <view class="passenger-item">
+            <text>{{item.pronseName}}</text>
+            <text>手机号 {{item.pronsePhone}}</text>
+            <text>身份证号 {{item.pronseIdCard}}</text>
+          </view>
+        </view>
+        <checkbox class="radio" value="{{item.id}}"></checkbox>
+      </view>
+    </checkbox-group>
+    <view class="bottom">
+      <view class="addPassenger" bindtap="addTap">+ 新增乘车人</view>
+      <view class="complete" bindtap="complateTap">完成</view>
+    </view>
+  </view>
+</view>

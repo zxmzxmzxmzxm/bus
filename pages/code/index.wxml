@@ -1,0 +1,5 @@
+<!--pages/code/index.wxml-->
+<view>
+  <view class="codeT">请您凭此码乘车</view>
+  <image src="{{qrcode}}" class="codeImg"></image>
+</view>

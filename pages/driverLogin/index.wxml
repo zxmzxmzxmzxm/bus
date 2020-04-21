@@ -1,0 +1,16 @@
+<!--pages/driverLogin/index.wxml-->
+<view class="page">
+  <image class="logo" src="../image/loginlogo.png"></image>
+  <view class="title">司 机 登 录</view>
+  <view class="login-list">
+    <view class="login-item">
+      <text class="loginT">账号</text>
+      <input placeholder="请输入账号" value="{{phone}}" type="number" class="phone" bindinput="blurPhone" placeholder-class="phcolor"></input>
+    </view>
+    <view class="login-item">
+      <text class="loginT">密码</text>
+      <input placeholder="请输入密码" value="{{password}}" type="password" class="phone" bindinput="blurPassword" placeholder-class="phcolor"></input>
+    </view>
+    <button class="goUser goLogin" bindtap="loginTap">登录</button>
+  </view>
+</view>

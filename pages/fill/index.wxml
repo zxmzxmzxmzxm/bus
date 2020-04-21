@@ -1,0 +1,132 @@
+<!--pages/fill/index.wxml-->
+<view>
+  <view class="fill-list">
+    <text class="fillT">车票信息</text>
+    <view class="ticket-info">
+      <view>发车：{{dateTime}}</view>
+      <view class="ticket-info-list">
+        <image src="../image/mapSicon2.png" class="ticket-info-icon"></image>
+        <text>{{upStart}}</text>
+      </view>
+      <view class="ticket-info-list">
+        <image src="../image/mapEicon2.png" class="ticket-info-icon"></image>
+        <text>{{downEnd}}</text>
+      </view>
+      <view class="carPhone">随车电话：{{driverPhone}}</view>
+    </view>
+  </view>
+
+
+  <view class="fill-list">
+    <text class="fillT">乘车人</text>
+    <view class="ticket-info byBus-info">
+      <view class="addPassengersT">
+        <view>乘车人</view>
+        <view class="addPassengers" bindtap="addPassengerTap">添加</view>
+      </view>
+      <view bindchange="radioChange">
+        <view class="passenger-list" wx:for="{{personData}}" wx:for-item='item'>
+          <view class="left">
+            <image src="../image/edit1.png" class="edit" bindtap="editTap" data-id='{{item.id}}'></image>
+            <view class="passenger-item">
+              <text>{{item.pronseName}}</text>
+              <text>手机号 {{item.pronsePhone}}</text>
+              <text>身份证号 {{item.pronseIdCard}}</text>
+            </view>
+          </view>
+          <image src="../image/close_input.png" class="edit" bindtap="deleteTap" data-id='{{item.id}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- <view class="fill-list">
+    <text class="fillT">订票人</text>
+    <view class="ticket-info byBus-info">
+      <view class="BuyBus-list">
+        <text>订票人姓名</text>
+        <view class="inputBox">
+          <input class="BuyBus-input" placeholder="订票人姓名" value="{{pronseName}}" bindinput='blurName'></input>
+          <image src="../image/edit.png" class="editIcon"></image>
+        </view>
+      </view>
+      <view class="BuyBus-list nobot">
+        <text>订票人手机号</text>
+        <view class="inputBox">
+          <input type="number" class="BuyBus-input" placeholder="订票人手机号" value="{{pronsePhone}}" maxlength="11" bindinput='blurPhone'></input>
+          <image src="../image/edit.png" class="editIcon"></image>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class="fill-list">
+    <text class="fillT">支付信息</text>
+    <view class="pay-info">
+      <view class="money-info">
+        <view>
+          <text>正价票</text>
+          <text class="money">￥{{countPrice}}</text>
+        </view>
+        <view class="num-list">
+          <!-- <view class="des" bindtap="desTap">-</view> -->
+          <text>{{pronseNum}}人</text>
+          <!-- <view class="des" bindtap="addTap">+</view> -->
+        </view>
+      </view>
+      <view class="payQuan">
+        <view class="quan">
+          <image src="../image/rechargeIcon.png" class="quanIcon"></image>
+          <text>代金券</text>
+        </view>
+        <view class="chooseQuan" bindtap="showCouponTap">
+          <text>{{coupon}}</text>
+          <image src="../image/rightIcon.png" class="rightIcon"></image>
+        </view>
+      </view>
+      <view class="payQuan nobot">
+        <view class="quan">
+          <image src="../image/wxIcon.png" class="quanIcon"></image>
+          <text>微信支付</text>
+        </view>
+        <view class="chooseQuan">
+          <checkbox value="" checked ></checkbox>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="fill-list">
+    <text class="fillT">温馨提示</text>
+    <view class="tip">
+      交通部规定：乘车时请携带身份证，儿童乘车必须占位置，请携带0.6米以上的乘客自觉购买车票预留位置。
+    </view>
+  </view>
+  <view class="submitOrder">
+    <view class="submit-left">
+      <text class="payT">支付金额</text>
+      <text class="last-money">￥{{countPrice}}</text>
+    </view>
+    <button class="submit" bindtap="submitOrder">提交订单</button>
+  </view>
+
+  <!--弹窗-->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="use-box" wx:if="{{couponData.length>0}}">
+      <view class="couponT">您当前可使用代金券</view>
+      <view class="nouse" bindtap="nochooseTap">不使用优惠券</view>
+    </view>
+    <view class="coupon-container">
+    <view class="coupon-list" wx:for="{{couponData}}" wx:for-item='item' bindtap="chooseCouponTap" data-fullmoney='{{item.fullmoney}}' data-money="{{item.money}}" data-id="{{item.id}}">
+      <view class="sawtooth-bor item">
+        <view class="pt10 discount">
+          <view class="mj">满{{item.fullmoney}}减{{item.money}}</view>
+          <view class="fs12">到期时间</view>
+          <view class="fs12">{{item.expirydate}}</view>
+        </view>
+        <view class="textc receive">代金券</view>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

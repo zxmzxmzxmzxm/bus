@@ -1,0 +1,12 @@
+<!--pages/myHome/evaluation/index.wxml-->
+<view class="evaluation-list">
+  <view class="evaluation-item">
+    <view class="evaluationT">建议描述</view>
+    <textarea placeholder="描述建议" class="textarea" />
+  </view>
+  <view class="evaluation-item">
+    <view class="evaluationT">联系方式</view>
+    <input type="number" placeholder="请输入手机号" class="linkPhone"/>
+  </view>
+  <view class="submit">提交建议</view>
+</view>

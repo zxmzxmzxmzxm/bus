@@ -1,0 +1,22 @@
+/* pages/code/index.wxss */
+page{
+  font-size: 28rpx;
+  /* background-color: #fff; */
+  background-image: url(https://qjycard.com/WechatIMG1743.png);
+  background-size: cover;
+  color: #333;
+}
+.codeT{
+  text-align: center;
+  margin-top: 100rpx;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.codeImg{
+  width: 400rpx;
+  height: 400rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 60rpx;
+}

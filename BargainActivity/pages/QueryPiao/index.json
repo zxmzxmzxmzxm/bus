@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "van-collapse-item": "../../../template/dist/collapse-item/index",
+        "van-collapse": "../../../template/dist/collapse/index",
+        "component-authorize": "../../../template/authorize/authorize"
+    }
+}

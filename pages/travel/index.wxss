@@ -1,0 +1,1334 @@
+/* pages/travel/index.wxss */
+@import '../../template/calendar/index.wxss';
+page{
+  font-size: 28rpx;
+  background-color: #f1f1f1;
+  color: #333;
+}
+.swiper-img{
+  width: 100%;
+  height: 100%;
+}
+.pagetop{
+  background-color: #fff;
+  padding-bottom: 30rpx;
+  margin: 40rpx 0;
+}
+.form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx;
+}
+.address-container{
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.address{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  /* padding: 30rpx 0; */
+}
+.goCityT{
+  width:auto;
+  color: #666;
+  margin-right: 60rpx;
+
+}
+.goCity{
+  width:50px;
+  color: #333;
+  margin-right: 15px;
+}
+.startWhere{
+  color: rgb(46, 206, 139);
+  /* margin-left: 60rpx; */
+  padding-left: 20rpx;
+  /* border-left: 1px solid #666; */
+}
+.border{
+  height:17px;
+  background: #666;
+  width: 2rpx;
+
+}
+.endWhere{
+  color: rgb(245, 81, 76);
+  margin-left: 60rpx;
+  padding-left: 20rpx;
+  border-left: 1px solid #666;
+}
+.change{
+  width: 70rpx;
+  transform: rotate(90deg);
+}
+.searchB{
+  background-color: #1AA2EE;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 30rpx;
+  border-radius: 10rpx;
+}
+.search{
+  /* background-color: #1AA2EE; */
+  color: #000;
+  text-align: left;
+  line-height: 80rpx;
+  margin: 30rpx;
+  border-radius: 10rpx;
+}
+.charter-container{
+  background-color: #fff;
+  padding: 40rpx;
+}
+.charter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.charterT{
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.charterType{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40rpx 0;
+}
+.charterType image{
+  width: 200rpx;
+  border-radius: 10rpx;
+}
+
+
+/* 头部 */
+
+.head {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1px solid #ededed;
+  padding: 20rpx;
+  background: #fff;
+  box-shadow: 2px 2px 3px #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.logo{
+  width: 200rpx;
+  height: 100rpx;
+}
+.bus{
+  width: 80rpx;
+  height: 80rpx;
+}
+.nobusbox{
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nobus-img{
+  width: 160rpx;
+  height: 140rpx;
+}
+.nobus{
+  text-align: center;
+  margin-top: 60rpx;
+}
+.busback{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #fff;
+  background-color:#2ab4ff;
+  border-radius: 10rpx;
+  margin-top: 60rpx;
+}
+.backDate{
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+button.icon{ background: none;padding:0;}
+.title {
+  width: 140rpx;
+  line-height: 100rpx;
+  text-align: left;
+}
+
+/* 内容块 */
+
+.callBoxs {
+  width: 100%;
+  height: auto;
+  /* min-height: 400rpx; */
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  background: #fff;
+  padding-top: 20rpx;
+}
+.allRoute{
+width: 100%;
+height:60rpx;
+line-height: 60rpx;
+padding-left:35rpx;
+}
+.page_con {
+  width: 100%;
+  height: auto;
+  /* margin: 40rpx auto 0; */
+  background: #fff;
+  /* padding: 30rpx 0 0; */
+  box-sizing: border-box;
+  /* position: fixed;
+  left:0;
+  bottom:0; */
+}
+
+.top {
+  width: 455rpx;
+  height: 80rpx;
+  margin: 0 auto;
+}
+
+.tab {
+  padding: 0 30rpx;
+  margin-right: 20rpx;
+  height: 60rpx;
+  display: block;
+  width: 62rpx;
+  float: left;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+}
+
+.tab:last-child {
+  margin-right: 0;
+}
+
+.active {
+  border: 1px solid #ccc;
+  border-radius: 35rpx;
+}
+
+.con_title {
+  width: 100%;
+  height: 160rpx;
+  line-height: 160rpx;
+  text-align: center;
+  display: block;
+  font-size: 40rpx;
+  color: #6d6d6d;
+  margin-bottom: 60rpx;
+}
+
+/* 返回按钮 */
+
+.goback {
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 40rpx;
+  left: 20rpx;
+}
+
+/* 地址选择 */
+
+.add_box {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 30rpx;
+}
+
+.timeCar {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.address {
+  position: relative;
+  /* margin-bottom: 45rpx; *//* padding-bottom:20rpx; */
+  border-bottom: 1px solid #ccc;
+}
+
+
+.address .cirle {
+  position: absolute;
+  top: 46rpx;
+  left: 0;
+  /* background: #fff; */
+}
+
+.border_red {
+  border: 2px solid #e8425d;
+}
+
+.border_green {
+  border: 2px solid #04a078;
+}
+
+/* 呼车按钮 */
+
+.btnCall {
+  margin-top: 80rpx;
+  width: 100%;
+  border: none;
+  background: #4a4e5a;
+  color: #fff;
+  border-radius: 0;
+}
+
+/* 搜索城市列表 */
+
+.searchbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fafafa;
+  z-index: 17;
+}
+
+.fixed {
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  margin-bottom: 40rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 2px 2px 3px #ccc;
+}
+
+.posbox {
+  width: 200rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+}
+
+.posName {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+  border-right: 1px solid #ccc;
+}
+
+.posName .cityName {
+  width: 180rpx;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon-xiala {
+  font-size: 40rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* 搜索 */
+
+.weui-search-bar {
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  border: 0;
+  line-height: 80rpx;
+}
+
+.weui-search-bar__form {
+  border: 0;
+  border-radius: 0;
+}
+
+.weui-search-bar__input {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.weui-search-bar__cancel-btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-right: 15rpx;
+}
+
+.weui-search-bar__label {
+  line-height: 80rpx;
+}
+
+/* 搜索城市列表 */
+
+.cityList {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+.searchLetter {
+  position: fixed;
+  right: 0;
+  width: 50rpx;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  z-index: 1;
+}
+
+.searchLetter view {
+  margin-top: 20rpx;
+}
+
+.touchClass {
+  background-color: #fff;
+  color: #fff;
+  padding-top: 46rpx;
+}
+
+.showSlectedLetter {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -100rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  font-size: 52rpx;
+  z-index: 1;
+}
+
+.selection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 10rpx;
+}
+
+.item_letter {
+  display: flex;
+  background-color: #f5f5f5;
+  height: 40rpx;
+  padding-left: 34rpx;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.item_city {
+  display: flex;
+  background-color: #fff;
+  height: 100rpx;
+  padding-left: 34rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #ededed;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.hotcity-common {
+  font-size: 24rpx;
+  color: #666;
+  padding: 0 0 0 30rpx;
+}
+
+.thisCity {
+  padding-top: 30rpx;
+}
+
+.thisCityName {
+  display: inline-block;
+  border: 1rpx solid #2ab4ff;
+  border-radius: 8rpx;
+  padding: 10rpx 0;
+  font-size: 24rpx;
+  color: #2ab4ff;
+  text-align: center;
+  min-width: 149.5rpx;
+  margin: 20rpx 0 20rpx 30rpx;
+}
+
+.thishotText {
+  color: #2ab4ff;
+  font-size: 20rpx;
+  margin: 0 !important;
+}
+
+.slectCity {
+  border-color: #2ab4ff !important;
+}
+
+.slectCity view {
+  color: #2ab4ff !important;
+}
+
+.weui-grid {
+  position: relative;
+  float: left;
+  padding: 10rpx 0;
+  width: 149.5rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #ececec;
+  border-radius: 8rpx;
+  margin: 10rpx 12rpx;
+}
+
+.weui-grid__label {
+  display: block;
+  text-align: center;
+  color: #333;
+  font-size: 24rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 搜索具体地址列表 */
+
+.searchList {
+  width: 100%;
+  height: auto;
+  margin-top: 10rpx;
+  float: left;
+  border: 1px ssolid red;
+}
+
+.addList {
+  width: 100%;
+  height: 170rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.addList icon {
+  width: 100rpx;
+  height: 170rpx;
+  text-align: center;
+  line-height: 170rpx;
+  font-size: 60rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #dcdcdc;
+}
+
+.addList .halfBox {
+  width: 100%;
+  height: 100%;
+  padding-left: 120rpx;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+
+.halfBox .half {
+  width: 100%;
+  height: 110rpx;
+  line-height: 140rpx;
+  float: left;
+  color: #000;
+  font-size: 36rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.halfBox .halfs {
+  width: 100%;
+  height: 60rpx;
+  line-height: 30rpx;
+  color: #acacac;
+  font-size: 30rpx;
+}
+
+/* 起点地图 */
+
+.Mapaddress {
+  width: 90%;
+  height: auto;
+  background: #fff;
+  position: fixed;
+  left: 5%;
+  bottom: 20rpx;
+}
+
+.addBoxs {
+  width: 100%;
+  height: 160rpx;
+  background: #fff;
+  position: relative;
+}
+
+.leftBox {
+  width: 60rpx;
+  height: 160rpx;
+  text-align: center;
+  line-height: 160rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.icon-add {
+  font-size: 55rpx;
+}
+
+.rightBox {
+  width: 100%;
+  padding-left: 80rpx;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+
+.addT {
+  height: 100rpx;
+  line-height: 110rpx;
+}
+
+.addB {
+  height: 60rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.shorebtn {
+  width: 100%;
+  height: 80rpx;
+  background: #4a4e5a;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.conTip {
+  width: auto;
+  height: 70rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -130rpx;
+  transform: translate(-50%, -50%);
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.consj {
+  width: 54rpx;
+  height: 54rpx;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -82rpx;
+  margin-left: -18rpx;
+  transform: translate(-50%, -50%);
+}
+
+/* 定位图标 */
+
+.mapiconBox {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+}
+
+.mapicon {
+  position: absolute;
+  z-index: 16;
+}
+
+.mapicon image {
+  width: 100%;
+  height: 100%;
+}
+
+.loca {
+  width: 28px;
+  height: 45px;
+  top: 50%;
+  left: 50%;
+  margin-top: -45px;
+  margin-left: -14px;
+}
+
+.pos {
+  width: 60rpx;
+  height: 60rpx;
+  bottom: 10px;
+  left: 20rpx;
+}
+
+/* 换乘车人 */
+
+.callC {
+  padding-top: 0;
+}
+
+.changeUser {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.changeUser1 {
+  width: 50%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ccc;
+  float: left;
+}
+
+/* 预约时间 */
+
+.timebox {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.timeNew {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.addbox {
+  margin-bottom: 20rpx;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* 返回 */
+
+.wrapTitle {
+  width: 10%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #000;
+  text-align: left;
+  float:left;
+}
+
+.icon-back-01 {
+  text-align: left;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left:30rpx;
+}
+
+.drawer_attr_boxs {
+  background: #fafafa;
+  padding: 0;
+}
+
+/* 安全中心弹窗 */
+
+#safeContainer {
+  height: auto;
+}
+
+.safeTitle {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.closeSafe {
+  width: 120rpx;
+  height: 100%;
+  line-height: 100rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 30rpx;
+  color: rgb(158, 158, 158);
+  font-size: 28rpx;
+}
+
+.safesBox {
+  width: 520rpx;
+  height: auto;
+  padding: 30rpx 0;
+  margin: 0 auto;
+}
+
+.safeQ {
+  width: 260rpx;
+  text-align: center;
+  float: left;
+}
+
+.safeQ view {
+  float: left;
+}
+
+.safeQ .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  float: left;
+  text-align: center;
+  line-height: 100rpx;
+  padding: 0;
+  color: #fff;
+  font-size: 60rpx;
+  margin-left: 80rpx;
+}
+
+.safeCon {
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.icon-share {
+  background: #3eb9a2;
+}
+
+.icon-safe {
+  background: #fb9053;
+}
+
+.safeList {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #ccc;
+}
+
+/* 安全框 */
+
+.image-style {
+  position: absolute;
+  height: 80rpx;
+  width: 160rpx;
+  z-index: 100;
+}
+/* ++++++++++++++++++++新增样式+++++++++++++++++++++++++++++++ */
+cityBox{
+width:100%;
+}
+.address input.S-city,.address input.S-county{
+width:36%;
+float:left;
+overflow: hidden;
+}
+.address input.S-city{ margin-left:40rpx;}
+.address input.S-start{ width:53%; float:right;}
+.S-sx{
+width: 1px;
+height: 42rpx;
+float: left;
+margin-top: 29rpx;
+background: #cdcdcd; 
+margin-left:10rpx;
+
+}
+.cirles{ 
+float:left;
+width:20px;
+height:20px;
+background: #cdcdcd;
+padding-top: 30rpx;
+border-radius: 50%;  
+}
+.citykt{
+width: 100%;
+height:auto;
+position: fixed;
+bottom:0;
+left:0;
+z-index: 81;
+background: #fff;
+padding: 20rpx 30rpx;
+}
+.cityH{
+width: 100%;
+height:70rpx;
+line-height: 70rpx;
+}
+.sename{
+border-bottom:1px solid #cdcdcd;
+width:96%;
+margin:0 auto;
+color:#3eb9a2;
+height:70rpx;
+line-height: 70rpx;
+}
+.citykt .weui-grids1{
+width: 100%;
+height:90rpx;
+line-height: 90rpx;
+float: left;
+text-align: left;
+padding-left:30rpx;
+
+}
+.weui-grid__label1{
+display: block;
+text-align: left;
+color: #333;
+font-size: 24rpx;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+padding-left:30rpx;
+}
+/* 开通路线 */
+.routeBox{
+width:100%;
+height:100%;
+position: fixed;
+top:0;
+left:0;
+background: #fff;
+z-index: 90;
+}
+.myRoute{
+width: 100%;
+height:100rpx;
+line-height: 100rpx;
+text-align: center;
+}
+.fgH{
+color:#cdcdcd;
+}
+.Rtitle{
+padding:0 20rpx;
+}
+.routeList{
+width:80%;
+height:auto;
+}
+.routeList{
+width:80%;
+margin:0 auto;
+}
+.w50{
+width:50%;
+float:left;
+}
+.w50 .leftName{
+width:45%;
+height:auto;
+float:left;
+}
+.leftName text{
+width:100%;
+height:60rpx;
+line-height:60rpx;
+float: left;
+}
+.text-r{ text-align: right}
+.text-l{ text-align: left}
+/* 四级标签 */
+.citysFour{
+width: 100%;
+height: auto;
+overflow: hidden;
+}
+.chose-txt {
+font-size: 26rpx;
+width: 29%;
+margin: 4px 14rpx;
+float: left;
+position: relative;
+}
+.chose-p {
+line-height: 35px;
+width: 100%;
+height: 35px;
+text-align: center;
+float: left; 
+}
+.checkCon{
+  position: absolute;
+  top:0;
+  left:0;
+  opacity: 0;
+  width: 100%;
+  height:35px;
+}
+.hisbox{
+width:100%;
+height:auto;
+background: #fff;
+margin-top:30rpx;
+padding:30rpx 0 20rpx;
+box-sizing: border-box;
+}
+.w90{
+width:90%;
+margin:0 auto;
+}
+.hisList{
+width:100%;
+height:auto;
+position: relative;
+border-top: 1px solid #cdcdcd;
+padding:20rpx 0;
+}
+.addcon{
+width:100%;
+height:auto;
+padding-left:90rpx;
+box-sizing: border-box;
+}
+.hicon{
+width: 80rpx;
+height:120rpx;
+position: absolute;
+top:0;
+left:0;
+text-align: left;
+line-height: 120rpx;
+font-size: 72rpx;
+color:#aaa;
+}
+.hiscon{
+  width:100%;
+  height:60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.w50{
+  width:49%;
+  height:60rpx;
+  float:left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; 
+  display: block;
+}
+.address input {
+    width: 55%;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left: 40rpx;
+    box-sizing: border-box;
+}
+/* 圆点 */
+.cirle {
+    width: 14rpx;
+    height: 14rpx;
+    border-radius: 50%;
+    display: block;
+    background: #fff;
+}
+.bg_red {
+    background: #e8425d;
+}
+
+.bg_green {
+    background: orange;
+}
+.fred {
+    color: #e8425d;
+}
+.fgreen {
+    color: #039f77;
+}
+/* 抽屉层 */
+
+/* 抽屉层 */
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 10;
+    color: #fff;
+}
+
+.drawer_attr_box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background: #fff;
+    overflow-y: scroll;
+}
+
+.drawer_attr_boxs {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #fff;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.close_icon {
+    width: 25rpx;
+    height: 25rpx;
+    line-height: 20rpx;
+    font-size: 30rpx;
+    position: absolute;
+    right: 5rpx;
+    top: 5rpx;
+    padding: 10rpx;
+    color: #ccc;
+    border: 1rpx solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    background: #fff;
+    z-index: 2;
+}
+
+.drawer_attr_content {
+    padding: 20rpx;
+    height: 600rpx;
+    overflow-y: scroll;
+}
+/* 返回 */
+
+.wrapTitle {
+    width: 10%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #000;
+    text-align: left;
+    float:left;
+}
+
+.icon-back-01 {
+    text-align: left;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left:30rpx;
+}
+
+.drawer_attr_boxs {
+    background: #fafafa;
+    padding: 0;
+}
+/* 搜索 */
+
+.searchs {
+    width: 88%;
+    /* padding-left: 220rpx; */
+    box-sizing: border-box;
+    height: 100%;
+    float:right;
+}
+
+.weui-search-bar {
+    padding: 0;
+    height: 100%;
+    background: #fff;
+    border: 0;
+    line-height: 80rpx;
+}
+
+.weui-search-bar__form {
+    border: 0;
+    border-radius: 0;
+}
+
+.weui-search-bar__input {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.weui-search-bar__cancel-btn {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-right: 15rpx;
+}
+
+.weui-search-bar__label {
+    line-height: 80rpx;
+}
+/* 四级标签 */
+.citysFour{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.chose-txt {
+  font-size: 26rpx;
+  width: 29%;
+  margin: 4px 14rpx;
+  float: left;
+  position: relative;
+}
+.chose-p {
+  line-height: 35px;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  float: left; 
+}
+.checkCon{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width: 100%;
+    height:35px;
+}
+.hisbox{
+  width:100%;
+  height:auto;
+  background: #fff;
+  margin-top:30rpx;
+  padding:30rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.w90{
+  width:90%;
+  margin:0 auto;
+}
+.hisList{
+  width:100%;
+  height:auto;
+  position: relative;
+  border-top: 1px solid #cdcdcd;
+  padding:20rpx 0;
+}
+.addcon{
+  width:100%;
+  height:auto;
+  padding-left:90rpx;
+  box-sizing: border-box;
+}
+.hicon{
+  width: 80rpx;
+  height:120rpx;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align: left;
+  line-height: 120rpx;
+  font-size: 72rpx;
+  color:#aaa;
+}
+.hiscon{
+  width:100%;
+  height:60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+.w50{
+  width:49%;
+  height:60rpx;
+  float:left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; 
+  display: block;
+}
+
+.dateBox{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: #fff;
+  z-index: 11111;
+}
+.citysCon{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: #f1f1f1;
+  z-index: 11111;
+}
+.goback{
+  width: 120rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 76%;
+  background-color: #119de9;
+  color: #fff;
+  padding: 10rpx 230rp;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+  box-sizing: border-box;
+}
+.address-list{
+  padding: 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 80rpx;
+}
+.address-item{
+  width: 30%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+  margin: 0 10rpx 20rpx 10rpx;
+}
+.time{
+  line-height: 80rpx;
+}

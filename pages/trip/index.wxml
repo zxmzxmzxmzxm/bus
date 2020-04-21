@@ -1,0 +1,34 @@
+<!--pages/trip/index.wxml-->
+<view class="page">
+  <view wx:if="{{orderData.length ==0}}" class="noTicketBox">
+    <image src="../image/noTripIcon.png" mode="widthFix" class="noTicketImg"></image>
+    <view class="nobuyTip">很抱歉，您还没有购票呢！</view>
+    <view class="toBuy" bindtap="buyTicket">去购票</view>
+  </view>
+  <view class="allOrder" wx:else="{{orderData.length >0}}">
+    <block wx:for="{{ orderData }}" wx:key="id" wx:for-item="item3">
+      <view class="detail-list">
+        <view class="date">订单编号： {{item3.orderNo}}</view>
+        <view class="detail-info">
+          <view class="site-list">
+            <view class="site-item">
+              <view class="startDot"></view>
+              <view>{{item3.upStart}}</view>
+            </view>
+            <view class="site-item">
+              <view class="startDot endDot"></view>
+              <view>{{item3.downEnd}}</view>
+            </view>
+            <view>{{item3.dateTime}}</view>
+          </view>
+          <view class="detail-operate">
+            <view class="money">￥{{item3.countPrice}}元</view>
+            <view class="go-detail" bindtap="goDetailTap" data-orderNo='{{item3.orderNo}}'>详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="bottom-down" wx:if="{{hid==false}}" style='text-align:center'>上拉加载</view>
+    <view class="bottom-down" wx:if="{{hid==true}}" style='text-align:center'>已无数据</view>
+  </view>
+</view>

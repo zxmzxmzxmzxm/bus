@@ -1,0 +1,158 @@
+<view class="top">
+  <view class="{{isFlag == -1 ? 'border-btm disabled' : ''}}" data-isFlag='-1' bindtap="tabOrder">全部订单</view>
+  <view class="{{isFlag == 0 ? 'border-btm disabled' : ''}}" data-isFlag="0" bindtap="tabOrder">待付款 </view>
+  <view class="{{isFlag == 3 ? 'border-btm disabled' : ''}}" data-isFlag="3" bindtap="tabOrder">待出行</view>
+  <view class="{{isFlag == 1 ? 'border-btm disabled' : ''}}" data-isFlag="1" bindtap="tabOrder">已出行</view>
+  <!-- <view class="{{dataId == 5 ? 'border-btm disabled' : ''}}" data-orderNum="5" bindtap="tabOrder">待评价</view> -->
+</view>
+
+<!--全部订单-->
+<view class="classname" wx:if="{{isFlag==-1}}">
+  <view class="allOrder" wx:if="{{orderData.length >0}}">
+    <block wx:for="{{ orderData }}" wx:key="id" wx:for-item="item1">
+      <view class="detail-list">
+        <view class="date">订单编号： {{item1.orderNo}}</view>
+        <view class="detail-info">
+          <view class="site-list">
+            <view class="site-item">
+              <view class="startDot"></view>
+              <view>{{item1.upStart}}</view>
+            </view>
+            <view class="site-item">
+              <view class="startDot endDot"></view>
+              <view>{{item1.downEnd}}</view>
+            </view>
+            <view>{{item1.dateTime}}</view>
+          </view>
+          <view class="detail-operate">
+            <view class="money">￥{{item1.countPrice}}元</view>
+            <view class="go-detail" bindtap="goDetailTap" data-orderNo='{{item1.orderNo}}'>详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="bottom-down" wx:if="{{hid==false}}" style='text-align:center'>上拉加载</view>
+    <view class="bottom-down" wx:if="{{hid==true}}" style='text-align:center'>已无数据</view>
+  </view>
+  <view class="notText" wx:else>
+    <text class="notGoodsWrap">
+        <text class="notGoods-text">
+            暂无订单
+        </text>
+    </text>
+  </view>
+</view>
+
+<!-- 待付款 -->
+<view class="classname" wx:if="{{isFlag==0}}">
+  <view class="allOrder" wx:if="{{orderData.length >0}}">
+    <block wx:for="{{ orderData }}" wx:key="id" wx:for-item="item2">
+      <view class="detail-list">
+        <view class="date">订单编号： {{item2.orderNo}}</view>
+        <view class="detail-info">
+          <view class="site-list">
+            <view class="site-item">
+              <view class="startDot"></view>
+              <view>{{item2.upStart}}</view>
+            </view>
+            <view class="site-item">
+              <view class="startDot endDot"></view>
+              <view>{{item2.downEnd}}</view>
+            </view>
+            <view>{{item2.dateTime}}</view>
+          </view>
+          <view class="detail-operate">
+            <view class="money">￥{{item2.countPrice}}元</view>
+            <view class="go-detail" bindtap="goDetailTap" data-orderNo='{{item2.orderNo}}'>详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="bottom-down" wx:if="{{hid==false}}" style='text-align:center'>上拉加载</view>
+    <view class="bottom-down" wx:if="{{hid==true}}" style='text-align:center'>已无数据</view>
+  </view>
+  <view class="notText" wx:else>
+    <text class="notGoodsWrap">
+        <text class="notGoods-text">
+            暂无订单
+        </text>
+    </text>
+  </view>
+</view>
+
+<!-- 待出行 -->
+<view class="classname" wx:if="{{isFlag==3}}">
+  <view class="allOrder" wx:if="{{orderData.length >0}}">
+    <block wx:for="{{ orderData }}" wx:key="id" wx:for-item="item3">
+      <view class="detail-list">
+        <view class="date">订单编号： {{item3.orderNo}}</view>
+        <view class="detail-info">
+          <view class="site-list">
+            <view class="site-item">
+              <view class="startDot"></view>
+              <view>{{item3.upStart}}</view>
+            </view>
+            <view class="site-item">
+              <view class="startDot endDot"></view>
+              <view>{{item3.downEnd}}</view>
+            </view>
+            <view>{{item3.dateTime}}</view>
+          </view>
+          <view class="detail-operate">
+            <view class="money">￥{{item3.countPrice}}元</view>
+            <view class="go-detail" bindtap="goDetailTap" data-orderNo='{{item3.orderNo}}'>详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="bottom-down" wx:if="{{hid==false}}" style='text-align:center'>上拉加载</view>
+    <view class="bottom-down" wx:if="{{hid==true}}" style='text-align:center'>已无数据</view>
+  </view>
+  <view class="notText" wx:else>
+    <text class="notGoodsWrap">
+        <text class="notGoods-text">
+            暂无订单
+        </text>
+    </text>
+  </view>
+</view>
+
+<!-- 已出行 -->
+<view class="classname" wx:if="{{isFlag==1}}">
+  <view class="allOrder" wx:if="{{orderData.length >0}}">
+    <block wx:for="{{ orderData }}" wx:key="id" wx:for-item="item4">
+      <view class="detail-list">
+        <view class="date">订单编号： {{item4.orderNo}}</view>
+        <view class="detail-info">
+          <view class="site-list">
+            <view class="site-item">
+              <view class="startDot"></view>
+              <view>{{item4.upStart}}</view>
+            </view>
+            <view class="site-item">
+              <view class="startDot endDot"></view>
+              <view>{{item4.downEnd}}</view>
+            </view>
+            <view>{{item4.dateTime}}</view>
+          </view>
+          <view class="detail-operate">
+            <view class="money">￥{{item4.countPrice}}元</view>
+            <view class="go-detail" bindtap="goDetailTap" data-orderNo='{{item4.orderNo}}'>详情</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="bottom-down" wx:if="{{hid==false}}" style='text-align:center'>上拉加载</view>
+    <view class="bottom-down" wx:if="{{hid==true}}" style='text-align:center'>已无数据</view>
+  </view>
+  <view class="notText" wx:else>
+    <text class="notGoodsWrap">
+        <text class="notGoods-text">
+            暂无订单
+        </text>
+    </text>
+  </view>
+</view>
+<!-- <loading hidden="{{loadingHidden}}">
+  加载中...
+</loading> -->

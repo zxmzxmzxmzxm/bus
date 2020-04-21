@@ -1,0 +1,299 @@
+.zhezhao {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8rpx 8rpx 0rpx 0rpx;
+}
+
+.box {
+    display: flex;
+}
+
+.box-lr {
+    flex-direction: row;
+}
+
+.box-rl {
+    flex-direction: row-reverse;
+}
+
+.box-tb {
+    flex-direction: column;
+}
+
+.box-pack-center {
+    justify-content: center;
+}
+
+.box-align-center {
+    align-items: center;
+}
+
+.box-wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+.bg {
+    background-image: linear-gradient(to bottom,#faefe7,#ffcbd7);
+    overflow: hidden;
+}
+
+.pink-color {
+    color: #FEC240;
+}
+
+.white-color {
+    color: #fff;
+}
+
+.fs24 {
+    font-size: 24rpx;
+}
+
+.fs28 {
+    font-size: 28rpx;
+}
+
+.fs32 {
+    font-size: 32rpx;
+}
+
+.fs36 {
+    font-size: 36rpx;
+}
+
+.datepicker-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.datepicker-input {
+    width: 300rpx;
+    height: 50rpx;
+    border: 1rpx solid #dadada;
+    border-radius: 10rpx;
+    padding: 10rpx;
+    font-size: 28rpx;
+}
+
+.datepicker-input::-webkit-input-placeholder {
+    color: #dadada;
+}
+
+.datepicker-wrap {
+    background-color: #fff;
+    box-shadow: 0 0 10rpx 0 #dadada;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.top-handle {
+    height: 90rpx;
+    justify-content: center;
+    padding: 0 44rpx;
+}
+
+.prev {
+}
+
+.next {
+}
+
+.prev-handle {
+    width: 80rpx;
+    height: 68rpx;
+    background-color: #FEC240;
+    color: #fff;
+    border-top-left-radius: 8rpx;
+    border-bottom-left-radius: 8rpx;
+    font-size: 32rpx;
+}
+
+.next-handle {
+    width: 80rpx;
+    height: 68rpx;
+    background-color: #FEC240;
+    color: #fff;
+    border-top-right-radius: 8rpx;
+    border-bottom-right-radius: 8rpx;
+    font-size: 32rpx;
+}
+
+.date-area {
+    padding: 0 50rpx;
+    height: 68rpx;
+    color: #fff;
+    background-color: #FEC240;
+}
+
+.weeks {
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #999;
+}
+
+.week {
+    text-align: center;
+}
+
+.days {
+    height: 500rpx;
+}
+
+.grid {
+    position: relative;
+    width: 14.285714285714286%;
+}
+
+.grid .ticket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 26rpx;
+    color: #fff;
+    background-color: #FEC240;
+}
+
+.day {
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 26rpx;
+    font-weight: 200;
+}
+
+.normal-day-color {
+    color: #333333;
+}
+
+.day-choosed-color {
+    color: #fff;
+}
+
+.disable-day-color {
+}
+
+.disable-day-color .day {
+    color: #333;
+    background: rgba(0,0,0,0.25);
+}
+
+.disable-day-circle {
+    background-color: #fbfdff;
+}
+
+.border-radius {
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.grid .pink-bg {
+    background-color: #FEC240;
+}
+
+.pink-bg-dark {
+    background-color: rgba(254,194,64,0.2);
+}
+
+.purple-bg {
+    background-color: #b8b8f1;
+}
+
+.right-triangle::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-left-color: #FEC240;
+    position: absolute;
+    right: -22rpx;
+    top: 18rpx;
+}
+
+.left-triangle::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-right-color: #FEC240;
+    position: absolute;
+    left: -22rpx;
+    top: 18rpx;
+}
+
+.tips {
+    text-align: center;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.types {
+    background-color: #ffedf4;
+    height: 50rpx;
+}
+
+.types-desc {
+    padding: 0 20rpx;
+}
+
+.type-name {
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+}
+
+.type-desc {
+    padding: 0 35rpx;
+    line-height: 38rpx;
+}
+
+.explain {
+    border-top: 1px solid #eee;
+    width: 90%;
+    margin: 20rpx 5% 20rpx 5%;
+    padding: 20rpx 0;
+}
+
+.explain-title {
+    font-weight: bold;
+    margin-bottom: 15rpx;
+}
+
+.explain-item {
+    padding: 8rpx 20rpx;
+    color: #fff;
+}
+
+.left-border-radius {
+    border-top-left-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+}
+
+.right-border-radius {
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}

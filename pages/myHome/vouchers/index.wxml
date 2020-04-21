@@ -1,0 +1,33 @@
+<!--pages/myHome/vouchers/index.wxml-->
+
+<!-- <view class="top">
+  <view class="{{dataId == 1 ? 'border-btm disabled' : ''}}" data-orderNum="1" bindtap="tabOrder">未使用</view>
+  <view class="{{dataId == 2 ? 'border-btm disabled' : ''}}" data-orderNum="2" bindtap="tabOrder">已使用 </view>
+  <view class="{{dataId == 3 ? 'border-btm disabled' : ''}}" data-orderNum="3" bindtap="tabOrder">已过期</view>
+</view> -->
+<view wx:if="{{couponData.length>0}}">
+  <view class="use-box">
+    <view class="couponT">您当前可使用代金券</view>
+    <view class="nouse" bindtap="nochooseTap">不使用优惠券</view>
+  </view>
+  <view class="coupon-container">
+    <view class="coupon-list" wx:for="{{couponData}}" wx:for-item='item' bindtap="chooseCouponTap" data-fullmoney='{{item.fullmoney}}' data-money="{{item.money}}" data-id="{{item.id}}">
+      <view class="sawtooth-bor item">
+        <view class="pt10 discount">
+          <view class="mj">满{{item.fullmoney}}减{{item.money}}</view>
+          <view class="fs12">到期时间</view>
+          <view class="fs12">{{item.expirydate}}</view>
+        </view>
+        <view class="textc receive">代金券</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="nocoupon" wx:else>当前无可用优惠券~~~</view>
+
+  <!-- <view class="notGoods" wx:else>
+    <text class="notText"><text class="notGoods-text">暂无可用代金券</text></text>
+  </view> -->
+<!-- <loading hidden="{{loadingHidden}}">
+  加载中...
+</loading> -->

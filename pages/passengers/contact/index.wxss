@@ -1,0 +1,46 @@
+/* pages/contact/index.wxss */
+page{
+  font-size: 28rpx;
+  background-color: #f1f1f1;
+  color: #333;
+}
+.fillT{
+  line-height: 70rpx;
+  color: #999;
+  margin-left: 40rpx;
+}
+.passenger-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20rpx 40rpx;
+  border-bottom: 1px solid #f3f3f3;
+}
+.passenger-item{
+  display: flex;
+  flex-direction: column;
+}
+.passenger-item text{
+  height: 50rpx;
+}
+.operate{
+  display: flex;
+  flex-direction: row;
+}
+.edit{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 40rpx;
+}
+.save{
+  width: 90%;
+  background-color: #5099ff;
+  color: #fff;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 60rpx auto;
+  border-radius: 10rpx;
+}
